@@ -152,11 +152,11 @@ while True:
 
         # Draws a square with a text indicating the gesture
         cv2.rectangle(image, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
-        cv2.putText(image, txt, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv2.putText(image, txt, (x_min, y_min - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
     # Might require to adjust the color of the text depending on the background
-    cv2.putText(image, f'Player Score: {player_score}', (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
-    cv2.putText(image, f'Computer Score: {computer_score}', (image.shape[1] - 310, 50), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 0), 2)
+    cv2.putText(image, f'Player Score: {player_score}', (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    cv2.putText(image, f'Computer Score: {computer_score}', (image.shape[1] - 310, 50), cv2.FONT_HERSHEY_SIMPLEX, 1,(0, 0, 255), 2)
 
     cv2.imshow('Handtracker', image)
     if cv2.waitKey(1) & 0xFF == ord('q'):
